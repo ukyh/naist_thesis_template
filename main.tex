@@ -8,7 +8,16 @@
 % but users may probably specify another font,
 % since there is no specification by the format.
 
-\documentclass[a4paper, total={14.5cm, 20.5cm}, 12pt]{article}
+% \documentclass[a4paper, total={14.5cm, 20.5cm}, 12pt]{article}
+\documentclass[
+paper=a4paper,
+fontsize=12pt,
+chapterprefix=true,
+DIV=calc,
+BCOR=0mm,
+pagesize=auto,
+draft=false]{scrreprt}
+\renewcommand{\autodot}{}% Remove all end-of-counter dots
 
 \usepackage{naist}
 
@@ -62,7 +71,8 @@
 \input{acknowledgement}
 
 \clearpage
-\bibliographystyle{ieeetr}
+% \bibliographystyle{ieeetr}
+\bibliographystyle{acl_natbib}
 % Citation style is not specified in the format given by NAIST.
 % Change the bibliography style following your specialization's conventions.
 % See also: https://www.overleaf.com/learn/latex/Bibtex_bibliography_styles
@@ -74,8 +84,7 @@
 \clearpage
 
 \appendix
-\section*{Appendices}
-\addcontentsline{toc}{section}{Appendices}%
+\addchap{Appendices}
 
 \renewcommand*{\thesubsection}{\Alph{subsection}}
 \input{ap1}

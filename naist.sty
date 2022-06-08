@@ -1,13 +1,36 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage{xcolor}
+\definecolor{darkblue}{rgb}{0, 0, 0.5}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=darkblue,
+    linkcolor=darkblue,
+    urlcolor=darkblue
+}
+% \urlstyle{same}
+\usepackage{natbib}
+\addtokomafont{disposition}{\rmfamily}
 
-% page layout from NAIST style (.word)
-\usepackage[top=2.65truecm,
-    left=2.96truecm,
-    right=3.03truecm,
-    bottom=2.33truecm]{geometry}
-    % Title page is somehow set bottom=0.49cm in the original Word
+\renewcommand{\bibname}{References}
+
+% % page layout from NAIST style (.word)
+% \usepackage[top=2.65truecm,
+%     left=2.96truecm,
+%     right=3.03truecm,
+%     bottom=2.33truecm]{geometry}
+%     % Title page is somehow set bottom=0.49cm in the original Word
+\usepackage{geometry}
+\geometry{
+    a4paper,    % 21.0 x 29.7
+    total={14.5truecm, 20.5truecm}, % textbody
+    top=4.6truecm,  % (29.7 - 20.5) / 2
+    bottom=4.6truecm,
+    left=3.25truecm,% (21.0 - 14.5) / 2
+    right=3.25truecm,
+}
 \linespread{1.2}
 
 % Title Page
@@ -37,7 +60,7 @@
 	\begin{titlepage}
 		\singlespacing
 		\begin{center}
-			\null\vspace{45mm}
+			\null\vspace{35mm}
 			{\Large\textbf{\@thesistype}} \\ % Master's thesis or doctoral dissertation
 			\vspace{35mm}
 			{\Large\textbf{\@title}} \\
