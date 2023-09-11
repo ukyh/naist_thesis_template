@@ -6,7 +6,7 @@ There are other LaTeX templates made by students (such as <a href="https://githu
 The layout, packages,  etc. are defined in `naist.sty`.
 Imported packages and new commands are limited to minimum, so that you can add packages by yourself without conflicts.
 
-## Note on Japanese Template:
+## Note on Japanese Template
 Use LaTex compiler instead of pdfLaTex compiler. If you are using Overleaf, pdfLaTex is the default compiler. You can change it on the `menu` of Overleaf's page.
 
 ## Updates
